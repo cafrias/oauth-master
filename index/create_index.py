@@ -1,5 +1,6 @@
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 
+
 def create_index():
     """
     Creates a vector store index from documents and websites.
@@ -9,9 +10,7 @@ def create_index():
     """
     print("Creating index...")
     print("\tReading specification", end=" ")
-    documents = SimpleDirectoryReader(
-        "./data/spec"
-    ).load_data()
+    documents = SimpleDirectoryReader("./data/spec").load_data()
     print("DONE")
 
     return VectorStoreIndex.from_documents(documents)

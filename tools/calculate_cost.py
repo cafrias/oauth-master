@@ -2,6 +2,7 @@ EMBEDDING_COST_PER_TOKEN = 0.020 / 1000000
 LLM_INPUT_COST_PER_TOKEN = 0.150 / 1000000
 LLM_OUTPUT_COST_PER_TOKEN = 0.600 / 1000000
 
+
 def calculate_cost(embedding_tokens, llm_input_tokens, llm_output_tokens):
     embedding_cost = embedding_tokens * EMBEDDING_COST_PER_TOKEN
     llm_input_cost = llm_input_tokens * LLM_INPUT_COST_PER_TOKEN

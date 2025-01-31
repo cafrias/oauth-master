@@ -1,7 +1,8 @@
 from html2text import HTML2Text
 
-SPEC_FILE_RAW = 'data/raw/rfc6749.html'
-SPEC_FILE = 'data/spec/rfc6749.html'
+SPEC_FILE_RAW = "data/raw/rfc6749.html"
+SPEC_FILE = "data/spec/rfc6749.html"
+
 
 def spec_to_text():
     print("Reding the spec raw file")
@@ -19,6 +20,7 @@ def spec_to_text():
         file.write(text)
 
     print("Done")
+
 
 if __name__ == "__main__":
     spec_to_text()
