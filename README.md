@@ -19,5 +19,6 @@ python run_dry.py
 
 - [X] Parse URLs.
 - [X] Create and Store Index
-- [ ] Can make query
+- [X] Can make query
 - [ ] REST API
+- [ ] Add evals and observability tools
