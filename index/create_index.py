@@ -1,5 +1,5 @@
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
-
+from llama_index.readers.web import AsyncWebPageReader
 
 def create_index():
     """
@@ -9,8 +9,14 @@ def create_index():
     :rtype: VectorStoreIndex
     """
     print("Creating index...")
-    print("\tReading specification", end=" ")
-    documents = SimpleDirectoryReader("./data/spec").load_data()
+    with open("./data/links.txt", "r", encoding="utf-8") as f:
+        content = f.read()
+
+    links = list(filter(lambda l: l != '', map(lambda l: l.strip(), content.split("\n"))))
+    documents = AsyncWebPageReader(
+        html_to_text=True,
+        fail_on_error=True,
+    ).load_data(links)
     print("DONE")
 
     return VectorStoreIndex.from_documents(documents)
