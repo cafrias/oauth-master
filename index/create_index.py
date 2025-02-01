@@ -17,9 +17,12 @@ def create_index():
         html_to_text=True,
         fail_on_error=True,
     ).load_data(links)
+
+    index = VectorStoreIndex.from_documents(documents)
+
     print("DONE")
 
-    return VectorStoreIndex.from_documents(documents)
+    return index
 
 
 if __name__ == "__main__":
