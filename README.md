@@ -17,4 +17,7 @@ python run_dry.py
 
 ## TODO:
 
-- [ ] Parse URLs.
+- [X] Parse URLs.
+- [X] Create and Store Index
+- [ ] Can make query
+- [ ] REST API
