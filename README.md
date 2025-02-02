@@ -4,6 +4,13 @@ This is my first RAG project, it indexes the OAuth 2.0 spec and some reference m
 
 ## Scripts
 
+API is implemented using FastAPI:
+```bash
+# Start the dev server
+fastapi dev main.py
+```
+
+Handy scripts for quick checks:
 ```bash
 # Run a cost calculation for the indexing and a demo query
 python run_dry.py
@@ -21,12 +28,13 @@ python run_query.py
 - LlamaIndex
 - Decoder Model: 4o-mini
 - Embedding Model: text-embedding-3-small
+- FastAPI
 
 ## TODO:
 
 - [X] Parse URLs.
 - [X] Create and Store Index
 - [X] Can make query
-- [ ] REST API
+- [X] REST API
 - [ ] Logging and tracing
 - [ ] Add evals and observability tools

@@ -3,12 +3,18 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.llms.openai import OpenAI
 from llama_index.core import Settings
 
-load_dotenv()
+def load_settings():
+    """
+    Loads configurations and initializes the system with specified settings.
 
-embed_model = OpenAIEmbedding(model="text-embedding-3-small")
-Settings.embed_model = embed_model
+    Sets the global embedding model and LLM.
+    """
+    load_dotenv()
 
-llm = OpenAI(
-    model="gpt-4o-mini",
-)
-Settings.llm = llm
+    embed_model = OpenAIEmbedding(model="text-embedding-3-small")
+    Settings.embed_model = embed_model
+
+    llm = OpenAI(
+        model="gpt-4o-mini",
+    )
+    Settings.llm = llm
