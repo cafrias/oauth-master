@@ -1,7 +1,7 @@
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.readers.web import AsyncWebPageReader
 
-def create_index():
+def create_index() -> VectorStoreIndex:
     """
     Creates a vector store index from documents and websites.
 
