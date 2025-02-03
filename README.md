@@ -36,5 +36,5 @@ python run_query.py
 - [X] Create and Store Index
 - [X] Can make query
 - [X] REST API
-- [ ] Logging and tracing
+- [X] Logging and tracing
 - [ ] Add evals and observability tools

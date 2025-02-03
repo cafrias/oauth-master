@@ -1,7 +1,9 @@
 from dotenv import load_dotenv
+from llama_index.core.callbacks import CallbackManager
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.llms.openai import OpenAI
 from llama_index.core import Settings
+from opik.integrations.llama_index import LlamaIndexCallbackHandler
 
 def load_settings():
     """
@@ -18,3 +20,6 @@ def load_settings():
         model="gpt-4o-mini",
     )
     Settings.llm = llm
+
+    opik_callback_handler = LlamaIndexCallbackHandler()
+    Settings.callback_manager = CallbackManager([opik_callback_handler])
