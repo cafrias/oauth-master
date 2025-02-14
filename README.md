@@ -37,4 +37,9 @@ python run_query.py
 - [X] Can make query
 - [X] REST API
 - [X] Logging and tracing
-- [ ] Add evals and observability tools
+- [ ] Generate test questions for the data
+- [ ] Add retrieval evaluation
+- [ ] Add Relevancy Evaluator
+- [ ] Add Faithfulness Evaluator
+- [ ] Combine metrics with Opik + Comet ML experiments
+- [ ] Use custom prompts
